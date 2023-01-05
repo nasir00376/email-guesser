@@ -28,6 +28,8 @@ app.use(errorHandler);
 
 app.listen(PORT, () => debug(`Server is listening on ${PORT}`));
 
+export default app;
+
 // process.on("SIGINT", () => {
 //   console.log("Exiting already in use");
 //   process.exit();
