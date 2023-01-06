@@ -49,5 +49,13 @@ describe("/api/guess-email", () => {
       expect(res.status).toBe(422);
       expect(res.body).toHaveProperty("errors");
     });
+
+    it("should reject request if derivation is not possible with 400 status", async () => {
+      domain = "abc";
+      const res = await exec();
+
+      expect(res.status).toBe(400);
+      expect(res.body).toHaveProperty("errors");
+    });
   });
 });

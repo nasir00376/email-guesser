@@ -12,7 +12,7 @@
     "build": "tsc",
     "prestart": "npm run build",
     "start": "DEBUG=EmailGuesser:* node .dist/index.js",
-    "start:dev": "DEBUG=EmailGuesser:* nodemon",
+    "debug": "DEBUG=EmailGuesser:* nodemon",
     "lint": "tslint --project . --format verbose"
   },
   "dependencies": {

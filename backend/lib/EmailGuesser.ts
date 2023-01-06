@@ -20,7 +20,7 @@ export class EmailGuesser {
     const domainLookup = EmailGuesser.generateDomainLookup(STATIC_DATA);
     const format = domainLookup[domain];
 
-    if (!format) throw new Error("There is no domain registered");
+    if (!format) throw new Error(`Sorry, there is no domain registered with domain name ${domain}`);
 
     debug(`${domain} format is ${format}`, JSON.stringify(domainLookup));
 
